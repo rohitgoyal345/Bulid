@@ -1,0 +1,110 @@
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#002155;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.banner_sec{
+    padding:110px 0;
+    width:100%;
+    background:url(../Images/banner_img1.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: relative;
+    z-index:1;
+    &::before{
+        position: absolute;
+        content: "";
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:linear-gradient(to right, $title-color 0%, rgba(255,255,255,0) 100%);
+        z-index:-1;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width: 289px;
+        height:275px;
+        right:0;
+        bottom:0;
+        background:url(../Images/banner_shape.png);
+        background-repeat:no-repeat;
+        z-index:-1;
+        overflow: hidden;
+    }
+   
+    .banner_main{
+        border-left:4px solid $bg-color;
+        .banner_title{
+            margin-left:15px;
+            h4{
+                @include title(18px ,500 );
+                color:$white-color;
+                margin-bottom:5px;
+                font-family: "Poppins", serif;
+            }
+            h2{
+                @include title(50px ,700 );
+                color:$white-color;
+                margin-bottom:5px;
+                font-family: "Poppins", serif;
+                span{
+                    color:$bg-color;
+                }
+            }
+            p{
+                @include title(16px ,300 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", serif;
+            }
+    
+            .Banner_btn{
+                margin-top: 25px;
+                position: relative;
+                display: inline-block;
+                font-size: 16px;
+                line-height: 30px;
+                color: $title-color;
+                font-weight: 700;
+                overflow: hidden;
+                border-radius: 0px;
+                padding: 12px 30px;
+                text-transform: capitalize;
+                background-color:$white-color;
+                font-family: 'Nunito Sans', sans-serif;
+                border:none;
+                z-index:1;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: all 0.4s;
+                    transform: scale(0.2, 1);
+                    background-color:$bg-color;
+                }
+                &:hover::before{
+                    opacity: 1;
+                    -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+                }
+                &:hover{
+                    color:$white-color;
+                }
+            }
+        }
+    }
+}
+

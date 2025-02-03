@@ -1,0 +1,50 @@
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#002155;
+$black-color:black;
+$text-color:#555555;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.countdown_sec{
+    width:100%;
+    overflow: hidden;
+
+    .count-main{
+        background:#002155;
+        padding:20px 0px;
+        .count-title{
+            text-align: center;
+            i{
+                color: white;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+            h4{
+                @include title(18px ,500 );
+                color:$bg-color;
+                margin-bottom:7px;
+                font-family: "Poppins", serif;
+            }
+            h5{
+                @include title(35px ,700 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", serif;
+            }
+        }
+    }
+    .count-main2{
+        background:$bg-color;
+        .count-title2{
+            h4{
+                color:#002155;
+            }
+        }
+    }
+}
+

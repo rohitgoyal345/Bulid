@@ -1,0 +1,115 @@
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#002155;
+$black-color:black;
+$text-color:#555555;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.about_sec{
+    padding-top:80px;
+    padding-bottom:130px;
+    width:100%;
+    background:$white-color;
+    position: relative;
+    z-index:1;
+    &::before{
+        position: absolute;
+        content: "";
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        background: url(../Images/about.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        background:rgba(0,33,85,0.90);
+        z-index: -1;
+    }
+    .about-title{
+        h6{
+            @include title(16px ,500 );
+            color:$bg-color;
+            margin-bottom:7px;
+            font-family: "Poppins", serif;
+        }
+        h2{
+            @include title(50px ,700 );
+            color:$white-color;
+            margin:0;
+            font-family: "Poppins", serif;
+            span{
+                color:$bg-color;
+            }
+        }
+        p{
+            @include title(15px ,300 );
+            color:$white-color;
+            margin:0;
+            font-family: "Poppins", serif;
+            line-height:25px;
+        }
+    }
+    .about-img{
+        position:relative;
+        width:100%;
+      
+        .about-imgs{
+            position: relative;
+            z-index: 1;
+            &::before{
+                position: absolute;
+                content: "";
+                width:620px;
+                height:460px;
+                right: -116.5px;
+                top: -180px;
+                background-image: url(../Images/about-img.jpg);
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: cover;
+                clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                width:635px;
+                height:460px;
+                right: -116.5px;
+                top: -180px;
+                background-color:white;
+                clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                z-index: -1;
+            }
+        }
+
+        .about-img-shape1{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                width:650px;
+                height:460px;
+                right: -116.5px;
+                top: -165px;
+                background-color:  #fd5d14;
+                clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+            }
+        }
+    }
+}
+

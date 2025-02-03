@@ -1,0 +1,154 @@
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#002155;
+$black-color:black;
+$text-color:#555555;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.Blog_sec{
+    padding:80px 0;
+    width:100%;
+    background:$white-color;
+    .blog-title{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+        h6{
+            @include title(16px ,500 );
+            color:$bg-color;
+            margin-bottom:7px;
+            font-family: "Poppins", serif;
+        }
+        h2{
+            @include title(50px ,700 );
+            color:$title-color;
+            margin:0;
+            font-family: "Poppins", serif;
+            span{
+                color:$bg-color;
+            }
+        }
+    }
+    .blog-card-main{
+        position: relative;
+        overflow: hidden;
+        .blog-img{
+            position: relative;
+            overflow: hidden;
+            img{
+                width:100%;
+                height:350px;
+                position: relative;
+                overflow: hidden;
+                animation:blog-anim 9s infinite linear;
+                @keyframes blog-anim {
+                    0%{
+                      transform:scale(1);
+                    }
+                    50%{
+                        transform:scale(1.3);
+                    }
+                    100%{
+                        transform:scale(1);
+                    }
+                }
+            }
+            .overlay{
+                padding: 20px;
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color:#002155;
+                top: 0;
+                left: 0;
+                opacity: 0.9;
+                transform: scale(0);
+                transition: .6s;
+                .blog-text {
+                    position: absolute;
+                    top: 21%;
+                    left: 0%;
+                    padding: 20px;
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        li{
+                            color:$white-color;
+                            margin-right: 25px;
+                            i{
+                              color:$bg-color;
+                              margin-right: 4px;
+                            }
+                        }
+                    }
+                    h4{
+                        @include title(22px ,800 );
+                        color:$white-color;
+                        margin-bottom:6px;
+                        letter-spacing: 1px;
+                        font-family: "Poppins", serif;
+                        margin-top: 10px;
+                    }
+                    p{
+                        @include title(17px ,400 );
+                        color:$white-color;
+                        margin-bottom:0px;
+                        font-family: "Poppins", serif;
+                    }
+                    .blog_btn{
+                        margin-top: 20px;
+                        position: relative;
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: $title-color;
+                        font-weight: 700;
+                        overflow: hidden;
+                        border-radius: 0px;
+                        padding: 10px 25px;
+                        text-transform: capitalize;
+                        background-color:$white-color;
+                        font-family: 'Nunito Sans', sans-serif;
+                        border:none;
+                        z-index:1;
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            opacity: 0;
+                            transition: all 0.4s;
+                            transform: scale(0.2, 1);
+                            background-color:$bg-color;
+                        }
+                        &:hover::before{
+                            opacity: 1;
+                            -webkit-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+                        &:hover{
+                            color:$white-color;
+                        }
+                    }
+                }
+            }
+            &:hover .overlay{
+                transform: scale(1.0);
+            }
+        }
+       
+    }
+}
+

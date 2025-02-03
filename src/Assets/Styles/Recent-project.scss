@@ -1,0 +1,193 @@
+
+$white-color:white;
+$bg-color:#fd5d14;
+$title-color:#002155;
+$black-color:black;
+$text-color:#555555;
+
+@mixin title($size, $weight){
+  font-size:$size;
+  font-weight:$weight;
+}
+
+.recent_sec{
+    padding:80px 0;
+    width:100%;
+    background:$white-color;
+    position: relative;
+    z-index:1;
+    &::before{
+        position: absolute;
+        content: "";
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        background: url(../Images/service-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    .recent-title{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+        h6{
+            @include title(16px ,500 );
+            color:$bg-color;
+            margin-bottom:7px;
+            font-family: "Poppins", serif;
+        }
+        h2{
+            @include title(50px ,700 );
+            color:$title-color;
+            margin:0;
+            font-family: "Poppins", serif;
+        }
+    }
+    .recent-card-main{
+        position: relative;
+        .recent-img{
+            position: relative;
+            img{
+                width:100%;
+                position: relative;
+            }
+            .recent-overlay{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                transition: -webkit-transform 0.4s ease;
+                transition: transform 0.4s ease;
+                transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+                -webkit-transform: scale(0, 1);
+                -ms-transform: scale(0, 1);
+                transform: scale(0, 1);
+                -webkit-transform-origin: right center;
+                -ms-transform-origin: right center;
+                transform-origin: right center;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 0px;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    z-index: 1;
+                    opacity: 0.80;
+                    background-color:$title-color;
+                }
+                a{
+                    text-decoration: none;
+                    position: absolute;
+                    right: 0%;
+                    top: 0%;
+                    width: 60px;
+                    height: 60px;
+                    color:$white-color;
+                    z-index: 2;
+                    font-weight: 600;
+                    font-size: 40px;
+                    text-align: center;
+                    line-height: 60px;
+                    border-radius: 0px;
+                    display: inline-block;
+                    background-color:$bg-color;
+                    transition: all 300ms ease;
+                    i{
+                       color: $white-color;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        right: 10px;
+                        top: 10px;
+                        width: 60px;
+                        height: 60px;
+                        z-index: -1;
+                        border-left: 10px solid rgba(255,255,255,0.20);
+                        border-bottom: 10px solid rgba(255,255,255,0.20);
+                    }
+                    &:hover{
+                        background-color: $title-color;
+                    }
+                }
+                .content {
+                    position: absolute;
+                    left: 40px;
+                    right: 40px;
+                    bottom: 40px;
+                    z-index: 1;
+                    h4{
+                        position: relative;
+                        margin-bottom: 8px;
+                        @include title(20px ,400 );
+                        color:$white-color;
+                        font-family: "Poppins", serif;
+                    }
+                    h5{
+                        position: relative;
+                        transition: all 300ms ease;
+                        @include title(20px ,400 );
+                        color:$bg-color;
+                        margin:0;
+                        font-family: "Poppins", serif;
+                    }
+                    .recent_btn{
+                        margin-top: 20px;
+                        position: relative;
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: $title-color;
+                        font-weight: 700;
+                        overflow: hidden;
+                        border-radius: 0px;
+                        padding: 10px 25px;
+                        text-transform: capitalize;
+                        background-color:$white-color;
+                        font-family: 'Nunito Sans', sans-serif;
+                        border:none;
+                        z-index:1;
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            opacity: 0;
+                            transition: all 0.4s;
+                            transform: scale(0.2, 1);
+                            background-color:$bg-color;
+                        }
+                        &:hover::before{
+                            opacity: 1;
+                            -webkit-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+                        &:hover{
+                            color:$white-color;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover .recent-overlay{
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+            -webkit-transform-origin: left center;
+            -ms-transform-origin: left center;
+            transform-origin: left center;
+        }
+    }
+    .last-card{
+        margin-top: 30px;
+    }
+}
+
