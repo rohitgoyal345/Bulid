@@ -14,6 +14,7 @@ $text-color:#555555;
     padding:80px 0;
     width:100%;
     background:$white-color;
+    overflow: hidden;
     .service-title{
         width: 100%;
         text-align: center;
@@ -22,13 +23,13 @@ $text-color:#555555;
             @include title(16px ,500 );
             color:$bg-color;
             margin-bottom:7px;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
         }
         h2{
             @include title(50px ,700 );
             color:$title-color;
             margin:0;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
             span{
                 color:$bg-color;
             }
@@ -66,7 +67,7 @@ $text-color:#555555;
                     margin-bottom: 0px;
                     @include title(18px ,500 );
                     color:$white-color;
-                    font-family: "Poppins", serif;
+                    font-family: "Poppins", sans-serif;
                 }
                 a{
                     text-decoration: none;
@@ -114,7 +115,7 @@ $text-color:#555555;
                         @include title(23px ,800 );
                         color:$bg-color;
                         letter-spacing: 1px;
-                        font-family: "Poppins", serif;
+                        font-family: "Poppins", sans-serif;
                     }
                     p{
                         position: relative;
@@ -122,7 +123,7 @@ $text-color:#555555;
                         @include title(14px ,300 );
                         color:$white-color;
                         margin:0;
-                        font-family: "Poppins", serif;
+                        font-family: "Poppins", sans-serif;
                     }
                 }
             }
@@ -137,3 +138,43 @@ $text-color:#555555;
     }
 }
 
+
+
+// responsive
+
+
+@media (min-width:320px) and (max-width:576px) {
+    
+    .Service_sec{
+        .service-title{
+            h2{
+                @include title(30px ,700 );
+            }
+        }
+        .service-card-main2{
+            margin:30px 0;
+        }
+    }
+
+}
+
+@media (min-width:577px) and (max-width:768px) {
+    
+    .Service_sec{
+        .service-card-main2{
+            margin:30px 0;
+        }
+    }
+
+}
+
+
+@media (min-width:769px) and (max-width:992px) {
+    
+    .Service_sec{
+        .service-card3{
+            margin-top:30px;
+        }
+    }
+
+}

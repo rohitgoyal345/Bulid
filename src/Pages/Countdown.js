@@ -30,7 +30,7 @@ function Countdown() {
       <Container fluid>
         <Row>
 
-          <Col lg={6} className="px-0" data-aos="fade-right">
+          <Col lg={6} xs={12} sm={12} md={6} className="px-0" data-aos="fade-right">
             <div className="count-main">
                <div className="row">
                  
@@ -53,7 +53,7 @@ function Countdown() {
             </div>
           </Col>
 
-          <Col lg={6} className="px-0" data-aos="fade-left">
+          <Col lg={6} xs={12} sm={12} md={6} className="px-0" data-aos="fade-left">
             <div className="count-main count-main2">
                <div className="row">
                  

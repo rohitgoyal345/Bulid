@@ -42,16 +42,16 @@ $text-color:#555555;
     }
     .about-title{
         h6{
-            @include title(16px ,500 );
+            @include title(18px ,700 );
             color:$bg-color;
             margin-bottom:7px;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
         }
         h2{
             @include title(50px ,700 );
             color:$white-color;
             margin:0;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
             span{
                 color:$bg-color;
             }
@@ -60,7 +60,7 @@ $text-color:#555555;
             @include title(15px ,300 );
             color:$white-color;
             margin:0;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
             line-height:25px;
         }
     }
@@ -113,3 +113,215 @@ $text-color:#555555;
     }
 }
 
+
+
+// responsive
+
+@media (min-width:320px) and (max-width:576px) {
+    
+    .about_sec{
+        padding-top:80px;
+        padding-bottom:130px;   
+        height: 950px;
+        .about-title{
+            h2{
+                @include title(30px ,700 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", sans-serif;
+                span{
+                    color:$bg-color;
+                }
+            }
+            p{
+                @include title(16px ,300 );
+            }
+        }
+        .about-img{
+            .about-imgs{
+                position: relative;
+                z-index: 1;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    right:0px;
+                    top: 45px;
+                    width:95%;
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width:100%;
+                    height:460px;
+                    right: 0px;
+                    top: 45px;
+                    background-color:white;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                    z-index: -1;
+                }
+            }
+    
+            .about-img-shape1{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width:103%;
+                    height:460px;
+                    right: 0px;
+                    top: 58px;
+                    background-color:  #fd5d14;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width:577px) and (max-width:768px) {
+    
+    .about_sec{
+        padding-top:80px;
+        padding-bottom:130px;   
+        height: 950px;
+        .about-title{
+            h6{
+                @include title(18px ,700 );
+                color:$bg-color;
+                margin-bottom:7px;
+                font-family: "Poppins", sans-serif;
+            }
+            h2{
+                @include title(45px ,700 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", sans-serif;
+                span{
+                    color:$bg-color;
+                }
+            }
+            p{
+                @include title(15px ,300 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", sans-serif;
+                line-height:25px;
+            }
+        }
+        .about-img{
+            .about-imgs{
+                position: relative;
+                z-index: 1;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    right:-30px;
+                    top: 45px;
+                    width:100%;
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width:103%;
+                    height:460px;
+                    right: -30px;
+                    top: 45px;
+                    background-color:white;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                    z-index: -1;
+                }
+            }
+    
+            .about-img-shape1{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width:106%;
+                    height:460px;
+                    right: -30px;
+                    top: 60px;
+                    background-color:  #fd5d14;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width:769px) and (max-width:992px) {
+    
+    .about_sec{
+        padding-top:80px;
+        padding-bottom:130px;   
+        height: 950px;
+        .about-title{
+            h6{
+                @include title(18px ,700 );
+                color:$bg-color;
+                margin-bottom:7px;
+                font-family: "Poppins", sans-serif;
+            }
+            h2{
+                @include title(45px ,700 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", sans-serif;
+                span{
+                    color:$bg-color;
+                }
+            }
+            p{
+                @include title(15px ,300 );
+                color:$white-color;
+                margin:0;
+                font-family: "Poppins", sans-serif;
+                line-height:25px;
+            }
+        }
+        .about-img{
+            .about-imgs{
+                position: relative;
+                z-index: 1;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    right:-30px;
+                    top: 45px;
+                    width:100%;
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width:103%;
+                    height:460px;
+                    right: -30px;
+                    top: 45px;
+                    background-color:white;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                    z-index: -1;
+                }
+            }
+    
+            .about-img-shape1{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width:106%;
+                    height:460px;
+                    right: -30px;
+                    top: 60px;
+                    background-color:  #fd5d14;
+                    clip-path:polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+                }
+            }
+        }
+    }
+
+}

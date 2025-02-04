@@ -16,6 +16,7 @@ $text-color:#555555;
     background:$white-color;
     position: relative;
     z-index:1;
+    overflow: hidden;
     &::before{
         position: absolute;
         content: "";
@@ -37,13 +38,13 @@ $text-color:#555555;
             @include title(16px ,500 );
             color:$bg-color;
             margin-bottom:7px;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
         }
         h2{
             @include title(50px ,700 );
             color:$title-color;
             margin:0;
-            font-family: "Poppins", serif;
+            font-family: "Poppins", sans-serif;
         }
     }
     .recent-card-main{
@@ -126,7 +127,7 @@ $text-color:#555555;
                         margin-bottom: 8px;
                         @include title(20px ,400 );
                         color:$white-color;
-                        font-family: "Poppins", serif;
+                        font-family: "Poppins", sans-serif;
                     }
                     h5{
                         position: relative;
@@ -134,7 +135,7 @@ $text-color:#555555;
                         @include title(20px ,400 );
                         color:$bg-color;
                         margin:0;
-                        font-family: "Poppins", serif;
+                        font-family: "Poppins", sans-serif;
                     }
                     .recent_btn{
                         margin-top: 20px;
@@ -191,3 +192,18 @@ $text-color:#555555;
     }
 }
 
+
+
+// responsive
+
+@media (min-width:320px) and (max-width:576px) {
+
+    .recent_sec{
+        .recent-title{
+            h2{
+                @include title(30px ,700 );
+            }
+        }
+    }
+    
+}

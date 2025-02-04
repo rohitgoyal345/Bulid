@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 
 // Components
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 
 // pages
 import Banner from "./Pages/Banner.js";
@@ -45,7 +46,7 @@ function App() {
             <Route path='/' element={<Blog />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

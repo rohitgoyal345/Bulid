@@ -29,7 +29,7 @@ function Recent({ filterCategory }) {
     <div className="recent_sec">
       <Container>
         <Row>
-          <Col lg={12}>
+          <Col lg={12} xs={12} sm={12} md={12}>
             <div className="recent-title">
               <h6>Our Recent Projects</h6>   
               <h2>Our Special Projects See Now</h2>
@@ -37,7 +37,7 @@ function Recent({ filterCategory }) {
           </Col>
 
           {filteredProjects.map((item) => (
-            <Col lg={4} key={item.id} className="mb-4">
+            <Col lg={4} xs={12} sm={6} md={6} key={item.id} className="mb-4">
               <div className="recent-card-main">
                 <div className="recent-img">
                   <img src={item.img} alt={`recent-img-${item.id}`} />

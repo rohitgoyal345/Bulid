@@ -9,7 +9,7 @@ $title-color:#002155;
 }
 
 .banner_sec{
-    padding:110px 0;
+    padding:130px 0;
     width:100%;
     background:url(../Images/banner_img1.jpg);
     background-position:center;
@@ -17,6 +17,7 @@ $title-color:#002155;
     background-size:cover;
     position: relative;
     z-index:1;
+    overflow: hidden;
     &::before{
         position: absolute;
         content: "";
@@ -48,13 +49,13 @@ $title-color:#002155;
                 @include title(18px ,500 );
                 color:$white-color;
                 margin-bottom:5px;
-                font-family: "Poppins", serif;
+                font-family: "Poppins", sans-serif;
             }
             h2{
                 @include title(50px ,700 );
                 color:$white-color;
                 margin-bottom:5px;
-                font-family: "Poppins", serif;
+                font-family: "Poppins", sans-serif;
                 span{
                     color:$bg-color;
                 }
@@ -63,7 +64,7 @@ $title-color:#002155;
                 @include title(16px ,300 );
                 color:$white-color;
                 margin:0;
-                font-family: "Poppins", serif;
+                font-family: "Poppins", sans-serif;
             }
     
             .Banner_btn{
@@ -107,4 +108,43 @@ $title-color:#002155;
         }
     }
 }
+
+// responsive
+
+@media (min-width:320px) and (max-width:576px) {
+    
+    .banner_sec{
+       
+        .banner_main{
+            .banner_title{
+                h4{
+                    @include title(16px ,500 );
+                }
+                h2{
+                    @include title(30px ,700 );
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width:577px) and (max-width:768px) {
+    
+    .banner_sec{
+       
+        .banner_main{
+            .banner_title{
+                p{
+                    @include title(15px ,300 );
+                }
+            }
+        }
+    }
+
+}
+
+
 

@@ -11,7 +11,7 @@ function Video() {
       <Container>
         <Row>
 
-            <Col lg={12}>
+            <Col lg={12} xs={12} sm={12} md={12}>
                 <div className="video-title">
                   <a href="" onClick={(e) => { e.preventDefault(); setShow(true); }}>
                     <i class="bi bi-play-fill"></i>

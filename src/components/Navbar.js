@@ -1,5 +1,5 @@
 import React , { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col , Button } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
@@ -26,6 +26,9 @@ function NavbarMain() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+  const [showNavbar, setShowNavbar] = useState(false);
 
   return (
     <>
@@ -86,8 +89,15 @@ function NavbarMain() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand>Menu</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav" className="justify-content-between">
+        {/* <Navbar.Toggle aria-controls="navbar-nav" /> */}
+        <Button 
+          variant="transparent" 
+          className="border-0 d-lg-none nav-toggle-btn"
+          onClick={() => setShowNavbar(!showNavbar)}
+        >
+          <i class="bi bi-list fs-3"></i>
+        </Button>
+        <Navbar.Collapse in={showNavbar} id="navbar-nav" className="justify-content-between">
           <Nav className="me-auto navbar-nav">
             <Nav.Link as={NavLink} to="/" exact > Home </Nav.Link>
             <Nav.Link as={NavLink} to="/about" > About </Nav.Link>

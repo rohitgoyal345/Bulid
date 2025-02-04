@@ -20,6 +20,7 @@ $text-color:#555555;
     position: relative;
     background-attachment: fixed;
     z-index:1;
+    overflow: hidden;
     &::after{
         position: absolute;
         content: "";
@@ -85,3 +86,22 @@ $text-color:#555555;
     }
 }
 
+
+
+// responsive
+
+@media (min-width:320px) and (max-width:576px) {
+    
+    .Video_sec{
+        padding:150px 0;
+    }
+
+}
+
+@media (min-width:577px) and (max-width:768px) {
+    
+    .Video_sec{
+        padding:200px 0;
+    }
+
+}

@@ -28,13 +28,13 @@ $text-color:#555555;
                 @include title(18px ,500 );
                 color:$bg-color;
                 margin-bottom:7px;
-                font-family: "Poppins", serif;
+                font-family: "Poppins", sans-serif;
             }
             h5{
                 @include title(35px ,700 );
                 color:$white-color;
                 margin:0;
-                font-family: "Poppins", serif;
+                font-family: "Poppins", sans-serif;
             }
         }
     }
